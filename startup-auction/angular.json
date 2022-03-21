@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "startup-auction"
+  "defaultProject": "startup-auction",
+  "cli": {
+    "analytics": "eba2f576-90da-4a69-8d55-62625e847826"
+  }
 }
