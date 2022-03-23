@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="carrousel">
+    <div class="card-glob">
+      <div class="carrouselDesign c-1">
+      </div>
+      <div class="carrouselDesign c-2">
+      </div>
+      <div class="carrouselDesign c-3">
+      </div>
+      <div class="card-btn">
+        <div>
+          <button></button>
+        </div>
+        <div>
+          <button></button>
+        </div>
+        <div>
+          <button></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sec-item">
+    <div class="cont-item">
+      <div class="title">
+        <p>Most Popular</p>
+      </div>
+      <div class="list-item">
+        <div class="card-item" *ngFor="let auction of auctions">
+          <div class="img"></div>
+          <div class="details">
+            <div class="name">
+              <p>{{ auction.name }}</p>
+            </div>
+            <div class="date">
+              <p>Acaba {{ auction.lastDate }} horas</p>
+            </div>
+            <div class="last-price">
+              <p>S/{{ auction.priceBase }}</p>
+            </div>
+            <div class="price">
+              <p>S/{{ auction.price }}</p>
+            </div>
+            <div class="buy">
+              <button>Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="img">
+
+    </div>
+  </div>
+  <div class="sec-item">
+    <div class="cont-item">
+      <div class="title">
+        <p>Most Popular</p>
+      </div>
+      <div class="list-item">
+        <div class="card-item">
+          <div class="img"></div>
+          <div class="details">
+            <div class="name">
+              <p>Sofa Azul</p>
+            </div>
+            <div class="date">
+              <p>Acaba 15:05 horas</p>
+            </div>
+            <div class="last-price">
+              <p>S/1500.00</p>
+            </div>
+            <div class="price">
+              <p>S/1500.00</p>
+            </div>
+            <div class="buy">
+              <button>Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="img">
+
+    </div>
+  </div>
+  <div class="asd">
+
+  </div>
+</div>

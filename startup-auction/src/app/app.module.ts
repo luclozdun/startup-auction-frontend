@@ -3,12 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavBarComponent } from './views/nav-bar/nav-bar.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FootBarComponent } from './views/foot-bar/foot-bar.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent,
+    HomePageComponent,
+    FootBarComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],

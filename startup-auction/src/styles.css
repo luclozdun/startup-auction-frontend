@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+body {
+  background: var(--body);
+}
+
+:root {
+  --grad-1: #81e1ff;
+  --grad-2: #a39bff;
+  --grad-3: #cb7ee7;
+  --grad-4: #de4e82;
+
+  --success: rgb(47, 194, 28);
+  --success-active: rgb(111, 255, 92);
+  --alert: #e93434;
+  --primary: #a3bcff;
+  --last: #b3b3b3;
+  --sale: #ff5858;
+  --text: black;
+  --alter-text: white;
+  --second: white;
+  --body: #edf8fe;
+}
