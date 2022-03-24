@@ -1,0 +1,38 @@
+div.sec-item {
+  display: block;
+  padding: 20px 0;
+  width: 1450px;
+  margin: 0 auto;
+}
+
+div.cont-item {
+  width: 100%;
+  display: block;
+  flex-direction: column;
+}
+
+div.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 0 0.5em 0;
+}
+
+div.list-item {
+  padding: 5px 0;
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+div.card {
+  width: 230px;
+  height: 380px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+@media (max-width: 1480px) {
+  div.sec-item {
+    width: 90%;
+  }
+}

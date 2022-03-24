@@ -28,6 +28,9 @@ body {
   --success-active: rgb(111, 255, 92);
   --alert: #e93434;
   --primary: #a3bcff;
+  --primary-trans: #d1deff;
+  --message: #ffe9c8;
+  --message-title: #ff3636;
   --last: #b3b3b3;
   --sale: #ff5858;
   --text: black;

@@ -20,68 +20,16 @@
       </div>
     </div>
   </div>
-  <div class="sec-item">
-    <div class="cont-item">
-      <div class="title">
-        <p>Most Popular</p>
-      </div>
-      <div class="list-item">
-        <div class="card-item" *ngFor="let auction of auctions">
-          <div class="img"></div>
-          <div class="details">
-            <div class="name">
-              <p>{{ auction.name }}</p>
-            </div>
-            <div class="date">
-              <p>Acaba {{ auction.lastDate }} horas</p>
-            </div>
-            <div class="last-price">
-              <p>S/{{ auction.priceBase }}</p>
-            </div>
-            <div class="price">
-              <p>S/{{ auction.price }}</p>
-            </div>
-            <div class="buy">
-              <button>Comprar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="list-carrousel">
+    <app-carrousel-auction title="Hola" [auctions]=auctions></app-carrousel-auction>
   </div>
   <div class="banner">
     <div class="img">
 
     </div>
   </div>
-  <div class="sec-item">
-    <div class="cont-item">
-      <div class="title">
-        <p>Most Popular</p>
-      </div>
-      <div class="list-item">
-        <div class="card-item">
-          <div class="img"></div>
-          <div class="details">
-            <div class="name">
-              <p>Sofa Azul</p>
-            </div>
-            <div class="date">
-              <p>Acaba 15:05 horas</p>
-            </div>
-            <div class="last-price">
-              <p>S/1500.00</p>
-            </div>
-            <div class="price">
-              <p>S/1500.00</p>
-            </div>
-            <div class="buy">
-              <button>Comprar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="list-carrousel">
+    <app-carrousel-auction title="Hola" [auctions]=auctions></app-carrousel-auction>
   </div>
   <div class="banner">
     <div class="img">

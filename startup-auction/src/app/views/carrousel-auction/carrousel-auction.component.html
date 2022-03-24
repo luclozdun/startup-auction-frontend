@@ -1,0 +1,12 @@
+<div class="sec-item" *ngIf="auctions !== null">
+  <div class="cont-item">
+    <div class="title">
+      <p>{{ title }}</p>
+    </div>
+    <div class="list-item">
+      <div class="card" *ngFor="let auction of auctions">
+        <app-card-auction [auction]=auction></app-card-auction>
+      </div>
+    </div>
+  </div>
+</div>

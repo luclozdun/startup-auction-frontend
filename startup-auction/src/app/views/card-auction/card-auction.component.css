@@ -1,0 +1,65 @@
+div.card-item {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: white;
+  margin: 0 20px 0 0;
+  box-shadow: 0 0 0 1px #b3b3b3;
+  overflow: hidden;
+}
+
+div.card-item div.img {
+  width: 100%;
+  height: 170px;
+  background: rgb(187, 187, 255);
+}
+
+div.card-item div.details {
+  width: 85%;
+  margin: 0 auto;
+}
+
+div.card-item div.name {
+  margin-top: 0.5em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+div.card-item div.date {
+  font-size: 0.9rem;
+  padding: 0.9em 0 0 0;
+  color: var(--text);
+}
+
+div.card-item div.last-price {
+  font-size: 0.9rem;
+  padding: 1.6em 0 0 0;
+  color: var(--last);
+  text-decoration: line-through;
+}
+
+div.card-item div.price {
+  font-size: 1.1rem;
+  padding: 0.4em 0 0 0;
+  font-weight: bold;
+  color: var(--sale);
+}
+
+div.card-item div.buy {
+  display: flex;
+  justify-content: center;
+}
+
+div.card-item button {
+  margin-top: 1em;
+  font-size: 1.1rem;
+  padding: 0.5em 0.6em;
+  background: var(--success);
+  color: white;
+  border-radius: 0.5em;
+}
+
+div.card-item button:active {
+  background: var(--success-active);
+}
