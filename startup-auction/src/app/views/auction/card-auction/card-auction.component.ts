@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Auction } from 'src/app/models/auction/Auction';
 
 @Component({
@@ -10,9 +11,16 @@ export class CardAuctionComponent implements OnInit {
 
   @Input() auction = {} as Auction
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  redirect(id: Number) {
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate(["/auction", id])
+      window.scrollTo(0, 0)
+    })
   }
 
 }

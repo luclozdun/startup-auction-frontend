@@ -3,11 +3,11 @@ import { Auction } from 'src/app/models/auction/Auction';
 import { AuctionService } from 'src/app/services/auction/auction.service';
 
 @Component({
-  selector: 'app-list-auction',
-  templateUrl: './list-auction.component.html',
-  styleUrls: ['./list-auction.component.css']
+  selector: 'app-shop-auction',
+  templateUrl: './shop-auction.component.html',
+  styleUrls: ['./shop-auction.component.css']
 })
-export class ListAuctionComponent implements OnInit {
+export class ShopAuctionComponent implements OnInit {
 
   auctions: Array<Auction>
 
@@ -16,11 +16,11 @@ export class ListAuctionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAllAuction()
+    this.getAllAuctions()
   }
 
-  getAllAuction() {
-    this.auctionService.getListAuction().subscribe((response: any) => {
+  getAllAuctions() {
+    return this.auctionService.getListAuction().subscribe((response: any) => {
       this.auctions = response
     })
   }

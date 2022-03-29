@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from '../app/components/home-page/home-page.component'
-import { ListAuctionComponent } from '../app/components/auction/list-auction/list-auction.component';
+import { ShopAuctionComponent } from '../app/components/auction/shop-auction/shop-auction.component';
 import { DetailAuctionComponent } from '../app/components/auction/detail-auction/detail-auction.component';
-
+import { CreateAuctionComponent } from '../app/components/auction/create-auction/create-auction.component'
 
 const routes: Routes = [
   {
@@ -12,11 +12,15 @@ const routes: Routes = [
   },
   {
     path: "auction",
-    component: ListAuctionComponent
+    component: ShopAuctionComponent
   },
   {
     path: "auction/:id",
     component: DetailAuctionComponent
+  },
+  {
+    path: "create-auction",
+    component: CreateAuctionComponent
   }
 ];
 

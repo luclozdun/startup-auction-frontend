@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="form">
+    <app-form-auction (updateList)="updateList()"></app-form-auction>
+  </div>
+  <div class="container-create">
+    <div class="info">
+      <p>Mis Productos</p>
+    </div>
+    <button (click)="openForm()">Crear Auction</button>
+  </div>
+  <app-list-auction-crud [auctions]="auctions" (update)="updateAuction($event)"></app-list-auction-crud>
+</div>
+

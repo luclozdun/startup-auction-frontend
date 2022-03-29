@@ -1,0 +1,38 @@
+div.container-create {
+  width: 950px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+div.container-create button {
+  padding: 0.5em 0.6em;
+  font-size: 1.1rem;
+  border-radius: 0.3em;
+  color: white;
+  background: var(--success);
+}
+
+div.container-create button:active {
+  background: var(--success-active);
+}
+
+div.container-create p {
+  font-size: 1.2rem;
+  margin: 0.5em 0;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media (max-width: 950px) {
+  div.container-create {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  div.container-create p {
+    margin: 0 0 1.5em 0;
+  }
+}

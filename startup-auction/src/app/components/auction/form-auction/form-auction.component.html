@@ -1,0 +1,59 @@
+<div class="container" *ngIf="active === true">
+  <div class="card">
+    <div class="title" (click)="closeForm()">
+      <p>{{ isUpdate === true ? "Update Auction" : "Create Auction" }}</p>
+    </div>
+    <div class="form">
+      <form>
+        <div class="input-underline">
+          <input required [(ngModel)]="request.name" name="name">
+          <span class="label">Name</span>
+          <span class="underline"></span>
+        </div>
+        <textarea placeholder="caracteristic" name="caracteristic" [(ngModel)]="request.caracteristic"></textarea>
+        <div class="input-underline">
+          <input required [(ngModel)]="request.image1" name="image1">
+          <span class="label">Image 1</span>
+          <span class="underline"></span>
+        </div>
+        <div class="input-underline">
+          <input required [(ngModel)]="request.image2" name="image2">
+          <span class="label">Image 2</span>
+          <span class="underline"></span>
+        </div>
+        <div class="input-underline">
+          <input required [(ngModel)]="request.image3" name="image3">
+          <span class="label">Image 3</span>
+          <span class="underline"></span>
+        </div>
+        <div class="input-underline">
+          <input required [(ngModel)]="request.video" name="video">
+          <span class="label">Video</span>
+          <span class="underline"></span>
+        </div>
+        <div class="select">
+          <p class="label s-p" (click)="selectBool = !selectBool">{{ selectName }}</p>
+          <div class="select-b" *ngIf="selectBool === true">
+            <div class="select-i" (click)="setCategory(1,'Nose')">
+              <p class="label">Nose</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-underline">
+          <input required type="number" [(ngModel)]="request.price" name="price">
+          <span class="label">Price</span>
+          <span class="underline"></span>
+        </div>
+        <div class="input-underline">
+          <input required type="date" [(ngModel)]="lastDate" name="lastDate">
+          <span class="label"></span>
+          <span class="underline"></span>
+        </div>
+      </form>
+
+    </div>
+    <div class="btn">
+      <button class="btn-success" (click)="sendUpdateList()">Enviar</button>
+    </div>
+  </div>
+</div>

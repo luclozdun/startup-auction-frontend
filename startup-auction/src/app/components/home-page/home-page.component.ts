@@ -7,7 +7,7 @@ import { AuctionService } from 'src/app/services/auction/auction.service';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css']
 })
-export class HomePageComponent implements OnInit, OnDestroy {
+export class HomePageComponent implements OnInit {
 
   auctions: Array<Auction>
 
@@ -20,10 +20,6 @@ export class HomePageComponent implements OnInit, OnDestroy {
       this.auctions = response
       console.log(response)
     })
-  }
-
-  ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
   }
 
   ngOnInit(): void {

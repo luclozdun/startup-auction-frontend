@@ -1,0 +1,28 @@
+<div class="card-item" [routerLink]="['/auction', auction.id]">
+  <div class="img">
+    <div class="image">
+
+    </div>
+    <div class="cape">
+      <div class="delete btn" (click)="deleteAuction(auction.id)"></div>
+      <div class="update btn" (click)="updateAuction(auction)"></div>
+    </div>
+  </div>
+  <div class="details">
+    <div class="name">
+      <p>{{ auction.name }}</p>
+    </div>
+    <div class="date">
+      <p>Acaba {{ auction.lastDate }} horas</p>
+    </div>
+    <div class="last-price">
+      <p>S/ {{ auction.priceBase }}</p>
+    </div>
+    <div class="price">
+      <p>S/ {{ auction.price }}</p>
+    </div>
+    <div class="buy">
+      <button>Comprar</button>
+    </div>
+  </div>
+</div>

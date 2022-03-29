@@ -32,5 +32,19 @@ export class AuctionService {
     return this.http.get<Auction>("http://localhost:8080/auctions").pipe(retry(2), catchError(this.handleError));
   }
 
+  createAuction(request: any): Observable<Auction>{
+    return this.http.post<Auction>("http://localhost:8080/auctions", request).pipe(catchError(this.handleError));
+  }
 
+  deleteAuction(id: Number): Observable<Auction>{
+    return this.http.delete<Auction>(`http://localhost:8080/auctions/${id}`).pipe(catchError(this.handleError));
+  }
+
+  updateAuction(id: Number, request: any): Observable<Auction>{
+    return this.http.put<Auction>(`http://localhost:8080/auctions/${id}`, request).pipe(catchError(this.handleError));
+  }
+
+  getAuction(id: Number): Observable<Auction>{
+    return this.http.get<Auction>(`http://localhost:8080/auctions/${id}`).pipe(catchError(this.handleError));
+  }
 }
