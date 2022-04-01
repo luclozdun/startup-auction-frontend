@@ -1,4 +1,9 @@
 <div class="container">
+  <div class="message-alert" *ngIf="balanceError === true">
+    <div class="icon-alert  ">
+    </div>
+    <p>No cuenta con saldo suficiente</p>
+  </div>
   <div class="container-auction">
     <p>{{ auction.name }}</p>
     <div class="principal">
@@ -8,52 +13,22 @@
           <div class="img-3 img-min"></div>
           <div class="video img-min"></div>
         </div>
-        <div class="img-1"></div>
+        <div class="img-1" (click)="scrollChatBody()"></div>
       </div>
       <div class="container-chat p-style">
         <div class="chat">
           <div class="chat-t">
-            <p class="description">@Sofa ofrece S/ 71.50</p>
+            <p class="description">@{{ infoAuction.name }} ofrece S/ {{ infoAuction.price }}</p>
             <p class="title">Cierra en 5:06 Horas</p>
           </div>
-          <div class="chat-b">
-            <div class="message">
-              <p><span class="user">@Sofaa</span> propuso <span>S/165.00</span></p>
-            </div>
-            <div class="message">
-              <p><span class="user">@Sofaa</span> propuso <span>S/170.00</span></p>
-            </div>
-            <div class="message">
-              <p><span class="user">@Sofaa</span> propuso <span>S/165.00</span></p>
-            </div>
-            <div class="message">
-              <p><span class="user">@Sofaa</span> propuso <span>S/170.00</span></p>
-            </div>
-            <div class="message">
-              <p><span class="user">@Sofaa</span> propuso <span>S/165.00</span></p>
-            </div>
-            <div class="message">
-              <p><span class="user">@Sofaa</span> propuso <span>S/170.00</span></p>
-            </div>
-            <div class="message">
-              <p><span class="user">@Sofaa</span> propuso <span>S/165.00</span></p>
-            </div>
-            <div class="message">
-              <p><span class="user">@Sofaa</span> propuso <span>S/170.00</span></p>
-            </div>
-            <div class="message">
-              <p><span class="user">@Sofaa</span> propuso <span>S/165.00</span></p>
-            </div>
-            <div class="message">
-              <p><span class="user">@Sofaa</span> propuso <span>S/170.00</span></p>
-            </div>
-            <div class="message">
-              <p><span class="user">@Sofaa</span> propuso <span>S/170.00</span></p>
+          <div class="chat-b" id="chat-b">
+            <div class="message" *ngFor="let msg of messages">
+              <p><span class="user">@{{ msg.customer?.name }}</span> propuso <span>S/{{ msg.price  }}</span></p>
             </div>
           </div>
           <div class="chat-c">
-            <input placeholder="Ofrecer precio">
-            <button>Enviar</button>
+            <input placeholder="Ofrecer precio" type="number" [(ngModel)]="price">
+            <button (click)="sendMessage()">Enviar</button>
           </div>
         </div>
       </div>

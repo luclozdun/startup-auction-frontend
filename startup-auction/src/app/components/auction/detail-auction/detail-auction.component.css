@@ -2,6 +2,28 @@ div.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+div.message-alert {
+  display: flex;
+  background: var(--alert);
+  color: white;
+  font-size: 1.1rem;
+  position: fixed;
+  bottom: 45px;
+  left: 0;
+  align-items: center;
+  z-index: 9;
+}
+
+div.message-alert div.icon-alert {
+  width: 60px;
+  height: 80px;
+}
+
+div.message-alert p {
+  padding-right: 0.5em;
 }
 
 div.container-auction {
@@ -90,6 +112,10 @@ div.chat-b {
   background: white;
   overflow-y: scroll;
   flex-direction: column;
+}
+
+div.chat-b::-webkit-scrollbar {
+  display: none;
 }
 
 div.message {
