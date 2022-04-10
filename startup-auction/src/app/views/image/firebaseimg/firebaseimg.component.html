@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card">
+    <div class="option-t">
+      <app-fill-file class="input-fill" (dataChange)="addImage($event)"></app-fill-file>
+      <button class="close" (click)="close()"></button>
+    </div>
+    <div class="body overflow" *ngIf="load">
+      <div class="img" *ngFor="let image of images; index as i">
+        <img [src]="image" tabindex="0" (click)="selectImg(i)">
+      </div>
+    </div>
+    <div class="body one" *ngIf="!load">
+      <img width="300" height="200" class="one" id="imagefirebaseAdd"/>
+    </div>
+    <div class="option-b">
+      <button  class="{{ inactive ? 'btn-success': 'btn-inactive' }}" (click)="send()">Aceptar</button>
+    </div>
+  </div>
+</div>

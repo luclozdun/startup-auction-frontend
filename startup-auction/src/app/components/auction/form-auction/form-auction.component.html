@@ -1,56 +1,49 @@
-<div class="container" *ngIf="active === true">
+<div class="container">
   <div class="card">
     <div class="title" (click)="closeForm()">
       <p>{{ isUpdate === true ? "Update Auction" : "Create Auction" }}</p>
     </div>
     <div class="form">
       <form>
-        <div class="input-underline">
-          <input required [(ngModel)]="request.name" name="name">
-          <span class="label">Name</span>
-          <span class="underline"></span>
+        <div class="one">
+          <app-btn-bar [data]="request.avaible" (dataChange)="updateAvaible($event)"></app-btn-bar>
         </div>
-        <textarea placeholder="caracteristic" name="caracteristic" [(ngModel)]="request.caracteristic"></textarea>
-        <div class="input-underline">
-          <input required [(ngModel)]="request.image1" name="image1">
-          <span class="label">Image 1</span>
-          <span class="underline"></span>
-        </div>
-        <div class="input-underline">
-          <input required [(ngModel)]="request.image2" name="image2">
-          <span class="label">Image 2</span>
-          <span class="underline"></span>
-        </div>
-        <div class="input-underline">
-          <input required [(ngModel)]="request.image3" name="image3">
-          <span class="label">Image 3</span>
-          <span class="underline"></span>
-        </div>
-        <div class="input-underline">
-          <input required [(ngModel)]="request.video" name="video">
-          <span class="label">Video</span>
-          <span class="underline"></span>
-        </div>
-        <div class="select">
-          <p class="label s-p" (click)="selectBool = !selectBool">{{ selectName }}</p>
-          <div class="select-b" *ngIf="selectBool === true">
-            <div class="select-i" (click)="setCategory(1,'Nose')">
-              <p class="label">Nose</p>
-            </div>
+        <div class="two g-line">
+          <div class="col">
+            <app-underline [name]="'Nombre'" [data]="request.name" (dataChange)="updateName($event)" class="d">
+            </app-underline>
+          </div>
+          <div class="col select">
+            <app-select-box class="d select" (dataChange)="updateCategory($event)">
+            </app-select-box>
           </div>
         </div>
-        <div class="input-underline">
-          <input required type="number" [(ngModel)]="request.price" name="price">
-          <span class="label">Price</span>
-          <span class="underline"></span>
+        <div class="one g-line">
+          <app-underline [name]="'Precio'" [data]="request.price" [type]="'number'" (dataChange)="updatePrice($event)" class="d">
+          </app-underline>
         </div>
-        <div class="input-underline">
-          <input required type="date" [(ngModel)]="lastDate" name="lastDate">
-          <span class="label"></span>
-          <span class="underline"></span>
+        <div class="one g-line">
+          <app-textarea-conform [data]="request.caracteristic" placeholder="Caracteristicas" (dataChange)="updateCaracteristic($event)"></app-textarea-conform>
+        </div>
+        <div class="one g-line">
+          <app-date-style [name]="'Hora de Inicio'" [data]="request.createDate" (dataChange)="updateCreateDate($event)"></app-date-style>
+        </div>
+        <div class="one g-line">
+          <app-date-style [name]="'Hora Final'" [data]="request.lastDate" (dataChange)="updateLastDate($event)"></app-date-style>
+        </div>
+        <div class="one g-line">
+          <app-box [data]="request.image1" (changeData)="updateImage1($event)"></app-box>
+        </div>
+        <div class="one g-line">
+          <app-box [data]="request.image2" (changeData)="updateImage2($event)"></app-box>
+        </div>
+        <div class="one g-line">
+          <app-box [data]="request.image3" (changeData)="updateImage3($event)"></app-box>
+        </div>
+        <div class="one g-line">
+          <app-box [data]="request.video" (changeData)="updateVideo($event)"></app-box>
         </div>
       </form>
-
     </div>
     <div class="btn">
       <button class="btn-success" (click)="sendUpdateList()">Enviar</button>

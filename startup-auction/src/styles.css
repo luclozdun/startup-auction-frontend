@@ -27,6 +27,8 @@ body {
 
   --success: #2fc21c;
   --success-active: #6fff5c;
+  --inactive: #a0a0a0;
+  --inactive-active: #bdbdbd;
   --delete: #e43131;
   --delete-active: #ff8686;
   --update: #ff932e;
@@ -45,94 +47,6 @@ body {
   --body: #edf8fe;
 }
 
-div.input-underline {
-  position: relative;
-  flex-direction: column;
-  display: flex;
-  justify-content: flex-end;
-}
-
-div.input-underline input {
-  width: 100%;
-  padding: 19px 10px 0 10px;
-  box-sizing: border-box;
-  flex: 1;
-  display: flex;
-  position: relative;
-  font-size: 1.1rem;
-}
-
-div.input-underline span.label {
-  pointer-events: none;
-  font-size: 1.1rem;
-  position: absolute;
-  transform: translateX(10px) translateY(-10px);
-  transition: all 0.5s ease;
-}
-
-div.input-underline input:focus + span.label,
-div.input-underline input:valid + span.label {
-  transform: translateY(-28px) translateX(10px);
-  font-size: 0.7rem;
-  font-weight: bold;
-}
-
-div.input-underline span.underline {
-  width: 100%;
-  height: 5px;
-  background: rgb(175, 175, 175);
-  position: relative;
-}
-
-div.input-underline span.underline::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 5px;
-  background: var(--primary);
-  transition: all 0.5s ease;
-}
-
-div.input-underline input:focus + span + span.underline::after,
-div.input-underline input:valid + span + span.underline::after {
-  width: 100%;
-}
-
-div.select {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  height: auto;
-  border: 1px solid rgb(134, 134, 134);
-  cursor: pointer;
-  flex-direction: column;
-  color: black;
-}
-
-div.select p.s-p {
-  color: white;
-  background: rebeccapurple;
-}
-
-div.select p.label {
-  position: relative;
-  padding: 0.8em 0.5em;
-  font-size: 1.1rem;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  box-sizing: border-box;
-}
-
-div.select div.select-i {
-  width: 100%;
-}
-
-div.select div.select-i:hover {
-  background: rgb(237, 218, 255);
-}
-
 button.btn-success {
   padding: 0.5em 0.6em;
   font-size: 1.1rem;
@@ -143,4 +57,16 @@ button.btn-success {
 
 button.btn-success:active {
   background: var(--success-active);
+}
+
+button.btn-inactive {
+  padding: 0.5em 0.6em;
+  font-size: 1.1rem;
+  border-radius: 0.3em;
+  color: white;
+  background: var(--inactive);
+}
+
+button.btn-inactive:active {
+  background: var(--inactive-active);
 }

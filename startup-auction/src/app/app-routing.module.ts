@@ -4,6 +4,7 @@ import { HomePageComponent } from '../app/components/home-page/home-page.compone
 import { ShopAuctionComponent } from '../app/components/auction/shop-auction/shop-auction.component';
 import { DetailAuctionComponent } from '../app/components/auction/detail-auction/detail-auction.component';
 import { CreateAuctionComponent } from '../app/components/auction/create-auction/create-auction.component'
+import { FormAuctionComponent } from '../app/components/auction/form-auction/form-auction.component'
 
 const routes: Routes = [
   {
@@ -21,7 +22,11 @@ const routes: Routes = [
   {
     path: "create-auction",
     component: CreateAuctionComponent
-  }
+  },
+  {
+    path: "config-auction",
+    component: FormAuctionComponent
+  },
 ];
 
 @NgModule({

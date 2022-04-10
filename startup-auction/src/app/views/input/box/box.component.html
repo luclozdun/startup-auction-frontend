@@ -1,0 +1,10 @@
+<div class="container">
+  <p (click)="show = true">{{ text }}</p>
+  <div class="image" *ngIf="image">
+    <img id="image" [src]="showImage" width="350" height="350">
+  </div>
+  <div *ngIf="show">
+    <app-firebaseimg (closeForm)="close()" (sendForm)="getUrl($event)">
+    </app-firebaseimg>
+  </div>
+</div>

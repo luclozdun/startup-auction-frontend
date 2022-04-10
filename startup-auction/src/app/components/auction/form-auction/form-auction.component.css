@@ -1,76 +1,79 @@
 div.container {
   width: 100%;
   height: 100%;
-  position: absolute;
-  background: #000000ce;
-  z-index: 9;
-  top: 0;
-  bottom: 0;
 }
 
 div.card {
   position: relative;
-  width: 480px;
-  height: 80%;
-  top: 100px;
-  margin: 0 auto;
-  background: white;
-  border-radius: 30px;
+  width: 100%;
 }
 
 div.title {
-  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  border-bottom: 2px solid black;
   padding: 0.6em 0;
+  margin: 0 0 0 1.5em;
   position: relative;
 }
 
 div.form {
-  overflow: auto;
-  position: relative;
-  height: 80%;
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 10px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: auto;
 }
+
 form {
   width: 80%;
-  height: 100%;
 }
 
-form input,
-form textarea,
-form select {
-  width: 100%;
+div.g-line {
+  margin-top: 25px;
 }
 
-form > div {
-  margin-top: 15px;
+div.two {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.two .col {
+  width: 45%;
+}
+
+div.one .o {
+  width: 40%;
 }
 
 div.btn {
   display: flex;
   justify-content: center;
-}
-
-textarea {
-  margin: 10px 0 0 0;
-  border: 1px solid rgb(134, 134, 134);
-  font-size: 1.1rem;
+  margin: 1.2em 0;
 }
 
 @media (max-width: 750px) {
   div.card {
-    width: 80%;
+    width: 100%;
+  }
+
+  div.two {
+    display: block;
+  }
+
+  div.two .d {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  div.two .col {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  div.two .select {
+    height: 40px;
   }
 }

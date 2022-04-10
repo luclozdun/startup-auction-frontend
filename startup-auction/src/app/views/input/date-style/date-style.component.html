@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="title">
+    <p class="title">{{ name }}</p>
+  </div>
+  <div class="input">
+    <label>{{ data }}</label>
+    <input type="date" [(ngModel)]="date" (ngModelChange)="update()">
+  </div>
+</div>

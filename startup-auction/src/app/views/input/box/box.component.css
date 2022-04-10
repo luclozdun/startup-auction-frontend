@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+}
+
+p {
+  padding: 0.6em;
+  font-size: 1.1rem;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+  background: rgb(46, 46, 46);
+}
+
+div.image {
+  padding: 10px 0;
+  background: rgb(218, 180, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 550px) {
+  div.image {
+    background: red;
+  }
+
+  img {
+    width: 90%;
+  }
+}

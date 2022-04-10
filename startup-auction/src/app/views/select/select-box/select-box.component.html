@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="box principal" (click)="showList = !showList">
+    <label>{{ value }}</label>
+  </div>
+  <div class="list" *ngIf="showList === true">
+    <div class="box second" (click)="setValues(1, 'Tecnologia')">
+      <label>Tecnologia</label>
+    </div>
+    <div class="box second" (click)="setValues(1, 'Hogar')">
+      <label>Hogar</label>
+    </div>
+    <div class="box second" (click)="setValues(1, 'Electrodomesticos')">
+      <label>Electrodomesticos</label>
+    </div>
+    <div class="box second" (click)="setValues(1, 'Muebles')">
+      <label>Muebles</label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+div.input-underline {
+  flex-direction: column;
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+div.input-underline input {
+  width: 100%;
+  padding: 19px 10px 0 10px;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+div.input-underline span.label {
+  pointer-events: none;
+  font-size: 1.1rem;
+  position: absolute;
+  transform: translateX(10px) translateY(-10px);
+  transition: all 0.5s ease;
+}
+
+div.input-underline input:focus + span.label,
+div.input-underline input:valid + span.label {
+  transform: translateY(-28px) translateX(10px);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+div.input-underline span.underline {
+  height: 5px;
+  background: rgb(175, 175, 175);
+  position: relative;
+}
+
+div.input-underline span.underline::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  background: var(--primary);
+  transition: all 0.5s ease;
+}
+
+div.input-underline input:focus + span + span.underline::after,
+div.input-underline input:valid + span + span.underline::after {
+  width: 100%;
+}
