@@ -5,9 +5,6 @@
     </div>
     <div class="form">
       <form>
-        <div class="one">
-          <app-btn-bar [data]="request.avaible" (dataChange)="updateAvaible($event)"></app-btn-bar>
-        </div>
         <div class="two g-line">
           <div class="col">
             <app-underline [name]="'Nombre'" [data]="request.name" (dataChange)="updateName($event)" class="d">
@@ -24,12 +21,6 @@
         </div>
         <div class="one g-line">
           <app-textarea-conform [data]="request.caracteristic" placeholder="Caracteristicas" (dataChange)="updateCaracteristic($event)"></app-textarea-conform>
-        </div>
-        <div class="one g-line">
-          <app-date-style [name]="'Hora de Inicio'" [data]="request.createDate" (dataChange)="updateCreateDate($event)"></app-date-style>
-        </div>
-        <div class="one g-line">
-          <app-date-style [name]="'Hora Final'" [data]="request.lastDate" (dataChange)="updateLastDate($event)"></app-date-style>
         </div>
         <div class="one g-line">
           <app-box [data]="request.image1" (changeData)="updateImage1($event)"></app-box>

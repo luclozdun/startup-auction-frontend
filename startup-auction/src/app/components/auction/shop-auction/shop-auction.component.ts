@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Auction } from 'src/app/models/auction/Auction';
+import { Auction } from 'src/app/models/auction/auction';
 import { AuctionService } from 'src/app/services/auction/auction.service';
 
 @Component({

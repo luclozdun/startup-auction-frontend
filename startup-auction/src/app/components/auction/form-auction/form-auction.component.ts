@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Auction } from 'src/app/models/auction/Auction';
+import { Auction } from 'src/app/models/auction/auction';
+import { AuctionProduct } from 'src/app/models/auction/auction-product';
+import { AuctionProductRequest } from 'src/app/models/auction/auction-product-request';
 import { AuctionRequest } from 'src/app/models/auction/auction-request';
 import { AuctionService } from 'src/app/services/auction/auction.service';
 
@@ -15,8 +17,8 @@ export class FormAuctionComponent implements OnInit {
   isUpdate: boolean = false
   auctionId: any
   active: boolean = false
-  request = {} as AuctionRequest
-  auction = {} as Auction
+  request = {} as AuctionProductRequest
+  auction = {} as AuctionProduct
 
 
   constructor(private auctionService: AuctionService, private router: ActivatedRoute) {
@@ -27,14 +29,17 @@ export class FormAuctionComponent implements OnInit {
   }
 
   resetValue() {
-    this.request.avaible = false
     this.request.name = ""
     this.request.caracteristic = ""
     this.request.image1 = ""
     this.request.image2 = ""
     this.request.image3 = ""
     this.request.video = ""
+    this.request.categoryId = 0
     this.request.price = 0
+    this.request.stock = 0
+    this.request.updateAt = ""
+    this.request.createAt = ""
   }
 
   ngOnInit(): void {
@@ -48,7 +53,6 @@ export class FormAuctionComponent implements OnInit {
       this.isUpdate = true
       this.auction = data
       this.auctionId = this.auction.id
-      this.request.avaible = this.auction.avaible
       this.request.name = this.auction.name
       this.request.caracteristic = this.auction.caracteristic
       this.request.image1 = this.auction.image1
@@ -56,8 +60,7 @@ export class FormAuctionComponent implements OnInit {
       this.request.image3 = this.auction.image3
       this.request.video = this.auction.video
       this.request.price = this.auction.price
-      this.request.createDate = this.auction.createDate
-      this.request.lastDate = this.auction.lastDate
+      this.request.createAt = this.auction.createAt
     })
   }
 
@@ -75,11 +78,8 @@ export class FormAuctionComponent implements OnInit {
 
   }
 
-  updateAvaible(data: any){this.request.avaible = data}
   updatePrice(data: any) {this.request.price = data}
   updateName(data: any) { this.request.name = data }
-  updateCreateDate(data: any) { this.request.createDate = data }
-  updateLastDate(data: any) { this.request.lastDate = data }
   updateCaracteristic(data: any) { this.request.caracteristic = data }
   updateImage1(data: any) { this.request.image1 = data }
   updateImage2(data: any) { this.request.image2 = data }
@@ -87,7 +87,6 @@ export class FormAuctionComponent implements OnInit {
   updateVideo(data: any) { this.request.video = data }
   updateCategory(data: any) {
     this.request.categoryId = data
-    this.request.customerId = data
   }
 
   closeForm(){

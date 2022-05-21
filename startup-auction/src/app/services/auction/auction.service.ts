@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { Auction } from 'src/app/models/auction/Auction';
+import { Auction } from 'src/app/models/auction/auction';
 
 
 @Injectable({

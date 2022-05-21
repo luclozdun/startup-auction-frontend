@@ -1,6 +1,6 @@
 import { Component, HostListener, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Auction } from 'src/app/models/auction/Auction';
+import { Auction } from 'src/app/models/auction/auction';
 import { MessageAuction } from 'src/app/models/auction/message-auction';
 import { MessageRequest } from 'src/app/models/auction/message-request';
 import { AuctionService } from 'src/app/services/auction/auction.service';

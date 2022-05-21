@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Auction } from 'src/app/models/auction/Auction';
+import { Auction } from 'src/app/models/auction/auction';
 import { AuctionService } from 'src/app/services/auction/auction.service';
 import { FormAuctionComponent } from '../form-auction/form-auction.component';
 

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Auction } from 'src/app/models/auction/Auction';
+import { Auction } from 'src/app/models/auction/auction';
 
 @Component({
   selector: 'app-list-auction',

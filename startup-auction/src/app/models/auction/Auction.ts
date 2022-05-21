@@ -1,17 +1,12 @@
-import { Category } from "../category/category";
+import { Customer } from "../customer/customer";
+import { AuctionProduct } from "./auction-product";
 
 export interface Auction {
   id: Number,
-  avaible: Boolean,
-  name: String,
-  caracteristic: String,
-  image1: String,
-  image2: String,
-  image3: String,
-  video: String,
-  category: Category,
+  auctionProduct: AuctionProduct,
   price: Number,
-  lastDate: Date,
-  createDate: Date,
-  priceBase: Number
+  customer: Customer,
+  active: Boolean,
+  createdAt: any,
+  finishedAt: any
 }

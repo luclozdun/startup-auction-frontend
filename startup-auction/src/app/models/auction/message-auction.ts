@@ -1,5 +1,5 @@
 import { Customer } from "../customer/customer";
-import { Auction } from "./Auction";
+import { Auction } from "./auction";
 
 export interface MessageAuction {
   id: Number,

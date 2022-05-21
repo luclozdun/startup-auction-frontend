@@ -1,5 +1,5 @@
 export interface Category {
-  Id: Number,
-  Name: String,
-  Description: String
+  id: Number,
+  name: String,
+  description: String
 }

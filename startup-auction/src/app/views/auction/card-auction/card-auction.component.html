@@ -6,16 +6,25 @@
   </div>
   <div class="details">
     <div class="name">
-      <p>{{ auction.name }}</p>
+      <p> {{auction.auctionProduct?.name}} </p>
     </div>
     <div class="date">
-      <p>Acaba {{ auction.lastDate }} horas</p>
+      <p>Termina en 5 horas</p>
     </div>
-    <div class="last-price">
-      <p>S/ {{ auction.priceBase }}</p>
-    </div>
-    <div class="price">
-      <p>S/ {{ auction.price }}</p>
+    <div class="prices">
+      <div *ngIf="auction.auctionProduct?.price !== auction.price; else content">
+        <div class="last-price">
+          <p>S/ {{auction.auctionProduct?.price}}</p>
+        </div>
+        <div class="price">
+          <p>S/ {{ auction.price }}</p>
+        </div>
+      </div>
+      <ng-template #content>
+        <div class="price">
+          <p>S/ {{ auction.price }}</p>
+        </div>
+      </ng-template>
     </div>
     <div class="buy">
       <button>Comprar</button>

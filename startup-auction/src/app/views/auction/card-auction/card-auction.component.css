@@ -45,9 +45,14 @@ div.card-item div.date {
   color: var(--text);
 }
 
+div.card-item div.prices {
+  width: 90%;
+  height: 70px;
+}
+
 div.card-item div.last-price {
   font-size: 0.9rem;
-  padding: 1.6em 0 0 0;
+  padding: 0.4em 0 0 0;
   color: var(--last);
   text-decoration: line-through;
 }
